@@ -118,7 +118,7 @@ export function TableRowSkeleton({
                <div className="h-6 w-24 rounded bg-gray-100"></div>
             </div>
          </td>
-         {/* Email */}
+         {/* Correo */}
          <td className="whitespace-nowrap px-3 py-3">
             <div className="h-6 w-32 rounded bg-gray-100"></div>
          </td>
@@ -194,7 +194,7 @@ export function InvoicesTableSkeleton() {
                            Customer
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium">
-                           Email
+                           Correo
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium">
                            Amount
@@ -209,7 +209,7 @@ export function InvoicesTableSkeleton() {
                            scope="col"
                            className="relative pb-4 pl-3 pr-6 pt-2 sm:pr-6"
                         >
-                           <span className="sr-only">Edit</span>
+                           <span className="sr-only">Editar</span>
                         </th>
                      </tr>
                   </thead>
@@ -251,22 +251,22 @@ export function CustomersTableSkeleton() {
                            Name
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium">
-                           Email
+                           Correo
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium">
-                           Total Invoices
+                           Total de facturas
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium">
-                           Total Pending
+                           Total pendiente
                         </th>
                         <th scope="col" className="px-3 py-5 font-medium">
-                           Total Paid
+                           Total pagado
                         </th>
                         {/* <th
                           scope="col"
                           className="relative pb-4 pl-3 pr-6 pt-2 sm:pr-6"
                        >
-                          <span className="sr-only">Edit</span>
+                          <span className="sr-only">Editar</span>
                        </th> */}
                      </tr>
                   </thead>

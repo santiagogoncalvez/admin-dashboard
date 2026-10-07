@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-   title: "Customers",
+   title: "Clientes",
 };
 
 export default async function CustomersPage({
@@ -20,9 +20,9 @@ export default async function CustomersPage({
    return (
       <div className="w-full">
          <h1 className={`${montserrat.className} mb-8 text-xl md:text-2xl`}>
-            Customers
+            Clientes
          </h1>
-         <Search placeholder="Search customers..." />
+         <Search placeholder="Buscar clientes..." />
          <Suspense key={query} fallback={<CustomersTableSkeleton />}>
             <CustomersTable query={query} />
          </Suspense>

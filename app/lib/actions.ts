@@ -14,15 +14,15 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: "require" });
 const CreateInvoiceSchema = z.object({
    id: z.string(),
    customerId: z.string({
-      invalid_type_error: "Please select a customer.",
-      required_error: "Please select a customer.",
+      invalid_type_error: "Seleccioná un cliente.",
+      required_error: "Seleccioná un cliente.",
    }),
    amount: z.coerce
       .number()
-      .gt(0, { message: "Please enter an amount greater than $0." }),
+      .gt(0, { message: "Ingresá un monto mayor a $0." }),
    status: z.enum(["pending", "paid"], {
-      invalid_type_error: "Please select an invoice status.",
-      required_error: "Please select an invoice status.",
+      invalid_type_error: "Seleccioná el estado de la factura.",
+      required_error: "Seleccioná el estado de la factura.",
    }),
    date: z.string(),
 });
@@ -59,7 +59,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
       // console.log(formDataParsed);
       return {
          errors: validatedFields.error.flatten().fieldErrors,
-         message: "Missing Fields. Failed to create invoice.",
+         message: "Faltan campos. No se pudo crear la factura.",
          values: formDataParsed,
       };
    }
@@ -80,7 +80,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
    } catch (error) {
       console.error(error);
       return {
-         message: "Database Error: Failed to Create Invoice.",
+         message: "Error de base de datos: no se pudo crear la factura.",
       };
    }
 
@@ -107,7 +107,7 @@ export async function updateInvoice(id: string, prevState: State, formData: Form
    if (!validatedFields.success) {
       return {
          errors: validatedFields.error.flatten().fieldErrors,
-         message: 'Missing Fields. Failed to Create Invoice.',
+         message: 'Faltan campos. No se pudo actualizar la factura.',
          values: formDataParsed,
       };
    }
@@ -125,7 +125,7 @@ export async function updateInvoice(id: string, prevState: State, formData: Form
    } catch (error) {
       console.error(error);
       return {
-         message: "Database Error: Failed to Update Invoice.",
+         message: "Error de base de datos: no se pudo actualizar la factura.",
       };
    }
 
@@ -141,7 +141,7 @@ export async function deleteInvoice(id: string) {
    } catch (error) {
       console.error(error);
       return {
-         message: "Database Error: Failed to Delete Invoice.",
+         message: "Error de base de datos: no se pudo eliminar la factura.",
       };
    }
 
@@ -160,9 +160,9 @@ export async function authenticate(
       if (error instanceof AuthError) {
          switch (error.type) {
             case "CredentialsSignin":
-               return 'Invalid credentials.';
+               return 'Credenciales inválidas.';
             default:
-               return "Something went wrong.";
+               return "Algo salió mal.";
          }
       }
 

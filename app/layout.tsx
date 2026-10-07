@@ -4,11 +4,12 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
    title: {
-      template: "%s | Acme dashboard",
-      default: "Acme Dashboard",
+      template: "%s | Admin Dashboard",
+      default: "Admin Dashboard",
    },
-   description: "The official Next.js Course Dashboard, built with App Router.",
-   metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
+   description:
+      "Aplicación full-stack de administración de Santiago Goncalvez",
+   metadataBase: new URL("https://santiagogoncalvez.com"),
 };
 
 export default function RootLayout({
@@ -17,12 +18,9 @@ export default function RootLayout({
    children: React.ReactNode;
 }) {
    return (
-      <html lang="en" className={`${inter.className} antialiased`}>
+      <html lang="es" className={`${inter.className} antialiased`}>
          <body>
-            {/* Esto es parte del layout completo */}
             {children}
-
-            {/* <footer className="py-10 flex justify-center items-center">Hecho con amor por la gente de vercel.</footer> */}
          </body>
       </html>
    );

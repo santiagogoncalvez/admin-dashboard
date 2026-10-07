@@ -1,4 +1,4 @@
-# 🚀 Next.js Dashboard App — Full-Stack
+# 🚀 Admin Dashboard - Full-Stack
 
 Este repositorio contiene el desarrollo completo de la aplicación de administración del curso oficial de **Next.js de Vercel**, enriquecido y potenciado con conceptos avanzados extraídos directamente de la documentación técnica y buenas prácticas de la comunidad (incluyendo el análisis del curso de Midudev).
 
