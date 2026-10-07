@@ -2,7 +2,7 @@
 
 Panel de administración full-stack construido con Next.js (App Router), TypeScript, Tailwind CSS, PostgreSQL y NextAuth.
 
-🌐 **Demo:** _URL a completar tras el deploy_
+🌐 **Demo:** https://nextjs-dashboard-one-sable-88.vercel.app
 
 ---
 
