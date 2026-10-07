@@ -140,9 +140,6 @@ export async function deleteInvoice(id: string) {
       await sql`DELETE FROM invoices WHERE id = ${id}`;
    } catch (error) {
       console.error(error);
-      return {
-         message: "Error de base de datos: no se pudo eliminar la factura.",
-      };
    }
 
    revalidatePath("/dashboard/invoices");
