@@ -2,7 +2,7 @@
 
 Panel de administración full-stack construido con Next.js (App Router), TypeScript, Tailwind CSS, PostgreSQL y NextAuth.
 
-🌐 **Demo:** https://nextjs-dashboard-one-sable-88.vercel.app
+🌐 **Demo:** https://admindashboard.santiagogoncalvez.com
 
 ---
 
