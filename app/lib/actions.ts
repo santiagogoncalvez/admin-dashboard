@@ -86,6 +86,8 @@ export async function createInvoice(prevState: State, formData: FormData) {
 
    // Luego de enviar los datos hay que revalidar la ruta en la que aparecen estos datos para que se puedan ver los nuevo datos y no se quede con el caché.
    revalidatePath("/dashboard/invoices");
+   revalidatePath("/dashboard");
+   revalidatePath("/dashboard/customers");
    redirect("/dashboard/invoices");
    //    console.log("createInvoice", rawFormData);
 }
@@ -130,6 +132,8 @@ export async function updateInvoice(id: string, prevState: State, formData: Form
    }
 
    revalidatePath("/dashboard/invoices");
+   revalidatePath("/dashboard");
+   revalidatePath("/dashboard/customers");
    redirect("/dashboard/invoices");
 }
 
@@ -143,6 +147,8 @@ export async function deleteInvoice(id: string) {
    }
 
    revalidatePath("/dashboard/invoices");
+   revalidatePath("/dashboard");
+   revalidatePath("/dashboard/customers");
 }
 
 export async function authenticate(
